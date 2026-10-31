@@ -34,24 +34,34 @@ SHA-256 do CSV original, antes da compressão:
 | PR_CAT | Categoria do produto | string |
 | PR_NOME | Nome do produto | string |
 
-## Como executar
+## Como executar no VS Code
 
-### Google Colab
+O projeto foi executado no VS Code com Python 3.13.17 e pandas 2.2.3.
+As instruções desta seção consideram o terminal aberto em `mini_projeto_varejo`,
+a pasta que contém `requirements.txt` e o notebook.
 
-Abra `Mini_Projeto_Varejo.ipynb`, envie `Base_Varejo.csv.gz` pelo painel de arquivos e execute as células de cima para baixo. O notebook contém a mesma lógica principal do script, explicações e uma célula opcional para baixar os resultados.
+### Script
 
-### VS Code / terminal
-
-Na pasta do projeto:
-
-```bash
+```powershell
 python -m pip install -r requirements.txt
 python mini_projeto_varejo.py
 ```
 
-Execução verificada com Python 3 e pandas 2.2.3. O script utiliza apenas pandas e módulos da biblioteca padrão. Os arquivos de saída são recriados na pasta `resultados/`.
+### Notebook
 
-Para ler a base limpa posteriormente:
+Instale o componente necessário ao notebook no mesmo ambiente Python:
+
+```powershell
+python -m pip install ipykernel
+```
+
+Abra `Mini_Projeto_Varejo.ipynb` no VS Code, selecione esse ambiente em
+**Select Kernel** e execute as células de cima para baixo. Os dados de entrada
+estão em `dados/Base_Varejo.csv.gz`; o pandas lê o arquivo comprimido diretamente.
+O notebook e o script contêm a mesma análise principal.
+
+Os resultados ficam em `resultados/`. Os arquivos CSV não preservam os tipos
+Python; para reler a base limpa, informe os identificadores e a coluna de data:
 
 ```python
 import pandas as pd
@@ -131,17 +141,17 @@ O grupo F tem maior número absoluto de compras, mas a frequência média por cl
 
 ## Conclusões
 
-- A base passou de 830,000 para 733,447 registros; foram separadas 96,553 repetições exatas e 0 linhas por identificador/data.
+- A base passou de 830.000 para 733.447 registros; foram separadas 96.553 repetições exatas e 0 linhas por identificador/data.
 
-- O recorte contém 18,471 compras e 1,000 clientes, de 04/01/2019 a 08/12/2022, adotando dia/mês/ano. A descrição geral do dataset não substitui o período observado.
+- O recorte contém 18.471 compras e 1.000 clientes, de 04/01/2019 a 08/12/2022, adotando dia/mês/ano. A descrição geral do dataset não substitui o período observado.
 
-- ALIMENTOS aparece em 18,267 compras (98.90% do total). As participações de categorias podem somar mais de 100%.
+- ALIMENTOS aparece em 18.267 compras (98,90% do total). As participações de categorias podem somar mais de 100%.
 
-- O grupo F tem mais compras neste recorte: 9,615. A tabela também informa compras por cliente, para considerar o tamanho dos grupos.
+- O grupo F tem mais compras neste recorte: 9.615. A tabela também informa compras por cliente, para considerar o tamanho dos grupos.
 
-- Nos clientes únicos, a média de filhos é 1.136 e a moda é 0. O mês com mais compras é 2019-05, com 711; isso não demonstra sazonalidade em uma amostra de cobertura não confirmada.
+- Nos clientes únicos, a média de filhos é 1,136 e a moda é 0. O mês com mais compras é 2019-05, com 711; isso não demonstra sazonalidade em uma amostra de cobertura não confirmada.
 
-- Há 3,228 registros limpos sem categoria. Sem preços, quantidades e confirmação da origem das repetições, não estimamos faturamento nem unidades vendidas. Não há colunas de dimensões físicas.
+- Há 3.228 registros limpos sem categoria. Sem preços, quantidades e confirmação da origem das repetições, não estimamos faturamento nem unidades vendidas. Não há colunas de dimensões físicas.
 
 ## Reflexão sobre ETL e qualidade dos dados
 
@@ -168,14 +178,13 @@ As limitações remanescentes são a origem incerta das repetições, o produto/
 - `resultados/estatisticas_filhos.csv`: todas as medidas solicitadas.
 - `resultados/por_*.csv`: tabelas dos agrupamentos.
 - `resultados/conclusoes.md`: seis tópicos recalculados pelo código.
-- `README_SEU_NOME_SUA_TURMA.md`: instruções de execução, a renomear com a identificação do aluno.
+- `README_GabrielDutraRodrigues_T7.md`: identificação e instruções de execução no VS Code.
 
 Os resultados descritos neste README correspondem à base identificada acima. Se a entrada mudar, execute novamente o código e atualize a discussão com os novos resultados.
 
 ## Referências
 
 - [Base de dados Varejo — Kaggle](https://www.kaggle.com/datasets/namespaiva/base-varejo/data).
-- Dicionário de campos: PDF `Projeto III - Anlise Exploratria de Dados Utilizando o Python ou RStudio.pdf`, incluído pelo autor no arquivo de download do dataset. As exigências de entrega seguidas são as do mini-projeto SCTEC, fornecidas pelo aluno.
+- Dicionário de campos: PDF `Projeto III - Anlise Exploratria de Dados Utilizando o Python ou RStudio.pdf`, incluído pelo autor no arquivo de download do dataset. As exigências de entrega seguidas são as do mini-projeto SCTEC, apresentadas no enunciado do curso.
 - [pandas: read_csv](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html).
-- [Google Colab: perguntas frequentes](https://research.google.com/colaboratory/faq.html).
 - [GitHub: adicionar arquivos a um repositório](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).

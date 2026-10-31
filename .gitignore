@@ -2,3 +2,5 @@
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
+/GUIA_PARA_CONCLUIR.md
+/ajustar_documentacao_varejo.py

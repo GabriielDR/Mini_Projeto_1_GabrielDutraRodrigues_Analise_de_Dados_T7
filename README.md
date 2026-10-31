@@ -25,7 +25,7 @@ ambiente Python com pandas e ipykernel e executar as células na ordem.
 
 - [Notebook executado](mini_projeto_varejo/Mini_Projeto_Varejo.ipynb)
 - [Script Python](mini_projeto_varejo/mini_projeto_varejo.py)
-- [Relatório completo e metodologia](mini_projeto_varejo/README.md)
+- [Relatório completo e metodologia](mini_projeto_varejo/RELATORIO_ANALISE.md)
 - [Instruções de execução](mini_projeto_varejo/README_GabrielDutraRodrigues_T7.md)
 - [Resultados](mini_projeto_varejo/resultados/)
 

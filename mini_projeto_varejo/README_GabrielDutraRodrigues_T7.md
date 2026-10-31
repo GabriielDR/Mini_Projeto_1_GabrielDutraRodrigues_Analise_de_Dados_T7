@@ -1,27 +1,40 @@
 # Instruções de execução
 
-Aluno(a): **Gabriel Dutra Rodrigues**
+**Aluno:** Gabriel Dutra Rodrigues  
+**Turma:** T7 — Análise de Dados com Python
 
-Turma: **T7 - Análise de Dados com Python** (o cabeçalho do enunciado indica T7).
+## Ambiente utilizado
 
-Renomeie este arquivo substituindo SEU_NOME e SUA_TURMA antes de entregar.
+VS Code no Windows, Python 3.13.17, pandas 2.2.3 e ipykernel para executar o notebook.
 
-## Google Colab
+## Execução a partir da pasta principal do repositório
 
-1. Abra o arquivo `Mini_Projeto_Varejo.ipynb` no Google Colab.
-2. Envie `dados/Base_Varejo.csv.gz` pelo painel de arquivos do Colab. Ele pode ficar na pasta principal da sessão.
-3. Execute as células na ordem, de cima para baixo, lendo as explicações.
-4. Confira os resultados; baixe o notebook executado e os resultados.
+Use um ambiente Python no qual as dependências abaixo estejam instaladas:
 
-## VS Code / terminal
-
-Mantenha as pastas e arquivos organizados como neste projeto. No terminal, na pasta do projeto:
-
-```bash
-python -m pip install -r requirements.txt
-python mini_projeto_varejo.py
+```powershell
+python -m pip install -r mini_projeto_varejo/requirements.txt
+python -m pip install ipykernel
 ```
 
-Os arquivos produzidos ficam em `resultados/`. O arquivo `df_limpo.csv.gz` é um CSV comprimido; o pandas lê esse formato diretamente.
+Para executar o script:
 
-A descrição do projeto, as escolhas de limpeza, a reflexão sobre ETL, os resultados e as referências estão no [README principal](README.md).
+```powershell
+python mini_projeto_varejo/mini_projeto_varejo.py
+```
+
+Para usar o notebook, abra `Mini_Projeto_Varejo.ipynb` no VS Code,
+selecione esse mesmo ambiente em **Select Kernel** e execute as células na ordem.
+No terminal, os comandos de instalação devem usar o Python do ambiente escolhido.
+
+## Dados e resultados
+
+- Entrada: `mini_projeto_varejo/dados/Base_Varejo.csv.gz`.
+- Saídas: `mini_projeto_varejo/resultados/`.
+- Base limpa: `mini_projeto_varejo/resultados/df_limpo.csv.gz`.
+
+Os arquivos `.csv.gz` são CSVs comprimidos e podem ser lidos diretamente pelo pandas.
+O script também funciona quando iniciado em outra pasta, pois localiza os dados
+em relação ao próprio arquivo de código.
+
+Consulte o [relatório da análise](RELATORIO_ANALISE.md) para conhecer as decisões
+de limpeza, estatísticas, agrupamentos, conclusões e limitações.
