@@ -13,8 +13,10 @@ e agrupamentos.
 
 No terminal, a partir da pasta principal do repositório:
 
+```powershell
 python -m pip install -r mini_projeto_varejo/requirements.txt
 python mini_projeto_varejo/mini_projeto_varejo.py
+```
 
 Também é possível abrir o notebook abaixo no VS Code, selecionar um
 ambiente Python com pandas e ipykernel e executar as células na ordem.
