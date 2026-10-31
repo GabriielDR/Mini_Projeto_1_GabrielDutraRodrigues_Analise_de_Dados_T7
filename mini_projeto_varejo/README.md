@@ -1,8 +1,7 @@
 # Mini-projeto: análise exploratória da base Varejo
 
-**Aluno(a): PREENCHER**  
-**Turma: CONFIRMAR**  
-**Curso:** Análise de Dados com Python — Módulo 1, Semana 07
+**Aluno(a): Gabriel Dutra Rodrigues**  
+**Turma: T7 - Análise de Dados com Python**  
 
 ## Objetivo
 

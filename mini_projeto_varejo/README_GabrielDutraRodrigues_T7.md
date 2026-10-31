@@ -1,8 +1,8 @@
 # Instruções de execução
 
-Aluno(a): **PREENCHER**
+Aluno(a): **Gabriel Dutra Rodrigues**
 
-Turma: **CONFIRMAR** (o cabeçalho do enunciado indica T7).
+Turma: **T7 - Análise de Dados com Python** (o cabeçalho do enunciado indica T7).
 
 Renomeie este arquivo substituindo SEU_NOME e SUA_TURMA antes de entregar.
 

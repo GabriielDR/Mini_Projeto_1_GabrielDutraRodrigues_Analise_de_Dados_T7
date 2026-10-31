@@ -1,6 +1,6 @@
 # %% [markdown]
 # # Mini-projeto: análise exploratória da base Varejo
-# **Aluno(a):** preencher | **Turma:** confirmar
+# **Aluno(a):** Gabriel Dutra Rodrigues | **Turma:** T7 - Análise de Dados com Python
 #
 # Objetivo: importar, diagnosticar, limpar e resumir uma base com pandas.
 # Execute os blocos na ordem. Uma linha é um registro de produto em uma compra;
